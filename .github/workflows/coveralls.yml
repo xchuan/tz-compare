@@ -8,28 +8,41 @@
 # push:
 #  branches: ["main"]
 
-on: ["push", "pull_request"]
-
-name: Test Coveralls
-
+name: Tests
+'on':
+  push:
+    branches:
+      - dev
+env:
+  CI: true
 jobs:
-
-  build:
-    name: Build
+  test:
+    name: Unit Testing
     runs-on: ubuntu-latest
     steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+      - name: Set Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: 22
+      - name: Install npm dependencies
+        run: npm install
+      - name: Run tests
+        run: npm run test
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: '${{ secrets.ACCESS_TOKEN }}'
+          flag-name: ubuntu-node-20
+          parallel: false
+  finish:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: '${{ secrets.ACCESS_TOKEN }}'
+          parallel-finished: true
 
-    - uses: actions/checkout@v4
-
-    - name: Use Node.js 22.x
-      uses: actions/setup-node@v3
-      with:
-        node-version: 22.x
-
-    - name: npm install, make test-coverage
-      run: |
-        npm install
-        make test-coverage
-
-    - name: Coveralls
-      uses: coverallsapp/github-action@v2
