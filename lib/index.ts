@@ -70,7 +70,6 @@ export function tzCompareTime(date:string, city:string,locale?:string){
       const compared = new Intl.DateTimeFormat(setLocale,  { dateStyle: "long",timeStyle: "long", timeZone: tzCode }).format(initDate)
       return junctionFormat(replaceFormatInput(locale ?? setLocale,totalOffset), [Math.abs(totalOffset), date, city,  compared]);
     }
-
     
     return date;
   }

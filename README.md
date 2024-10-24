@@ -2,6 +2,7 @@
 
 ![NPM Downloads](https://img.shields.io/npm/dm/tz-compare)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat)
+[![Coverage Status](https://coveralls.io/repos/github/xchuan/tz-compare/badge.svg?branch=main)](https://coveralls.io/github/xchuan/tz-compare?branch=main)
 
 Quickly compare the current time with the time of a specified city and display the timezone difference, city name need be in english, and localization support english, chinese, spanish and français.
 

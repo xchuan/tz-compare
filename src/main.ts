@@ -1,6 +1,6 @@
 import './style.css'
 import { compareLocal,tzCompare,tzCompareTime } from '../lib'
-
+import {junctionFormat} from '../lib/format'
 /*
 <p>${tzCompare('Moscow')}</p>
 <p>${tzCompare('Bangalore')}</p>
@@ -26,6 +26,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <h2>当地时间与指定城市对比</h2>
     
     <p>${tzCompare("Alaska","zh-CN")}</p>
+
+    <p>${tzCompare("Lome")}</p>
     
     <p>${tzCompare("Shenzhen","zh-CN")}</p>
     <p>${tzCompare("Guangzhou")}</p>
@@ -46,6 +48,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>${tzCompareTime('October 13, 2024 / 7:33 PM EDT','Chihuahua')}</p>
 
     <p>${tzCompareTime('October 13, 2024 / 7:33 PM EDT','New York')}</p>
+
+    <p>${junctionFormat('strings','11')}</p>
   </div>
 `
 
