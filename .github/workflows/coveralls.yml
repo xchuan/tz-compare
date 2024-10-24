@@ -12,7 +12,7 @@ name: Tests
 'on':
   push:
     branches:
-      - dev
+      - main
 env:
   CI: true
 jobs:
