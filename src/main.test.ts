@@ -31,7 +31,7 @@ test('check tzCompareTime with Istanbul time zone in en-US', () => {
 });
 
 test('check junctionFormat miss param', () => {
-  expect(junctionFormat('strings')).toBe("strings");
+  expect(junctionFormat('strings',undefined)).toBe("strings");
 
   expect(junctionFormat('strings',[])).toBe("strings");
   expect(junctionFormat('strings {0},{1},{2}',[1,2,3])).toBe("strings 1,2,3");
