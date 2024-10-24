@@ -3,15 +3,15 @@ import { tzCompare, tzCompareTime } from '../lib/index'
 import {junctionFormat} from '../lib/format'
 
 test('check tzCompare with local time zone in en-US', () => {
-  expect(tzCompare("Shanghai")).toContain("Local time is the same as");
-  expect(tzCompare("Beijing")).toContain("Local time is the same as");
+  expect(tzCompare("Shanghai")).toContain("8 hours behind of");
+  expect(tzCompare("Beijing")).toContain("8 hours behind of");
   expect(tzCompare("Alaska")).toContain("hours ahead of");
   expect(tzCompare("Funafuti")).toContain("hours behind of");
 });
 
 test('check tzCompare with local time zone in zh-CN', () => {
-  expect(tzCompare("Shanghai","zh-CN")).toContain("时间 相同");
-  expect(tzCompare("Beijing","zh-CN")).toContain("时间 相同");
+  expect(tzCompare("Shanghai","zh-CN")).toContain("时间相比 慢");
+  expect(tzCompare("Beijing","zh-CN")).toContain("时间相比 慢");
   expect(tzCompare("Alaska","zh-CN")).toContain("时间相比 快");
   expect(tzCompare("Funafuti","zh-CN")).toContain("时间相比 慢");
 });
