@@ -1,6 +1,6 @@
 {
   "name": "tz-compare",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Compare two datetime show time zone difference",
   "type": "module",
   "keywords": [
