@@ -27,8 +27,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "@babel/core": "^7.25.9",
