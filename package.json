@@ -1,6 +1,6 @@
 {
   "name": "tz-compare",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Compare two datetime show time zone difference",
   "type": "module",
   "keywords": [
@@ -29,6 +29,11 @@
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xchuan/tz-compare.git"
+  },
+  "homepage": "https://github.com/xchuan/tz-compare#readme",
   "devDependencies": {
     "@babel/core": "^7.25.9",
     "@babel/plugin-transform-react-jsx": "^7.25.9",
